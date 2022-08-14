@@ -1,5 +1,9 @@
 {
   "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
   "env": {
     "browser": true,
     "es2021": true,
@@ -9,12 +13,11 @@
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended",
-    "prettier",
-    "prettier/vue"
+    "prettier"
   ],
-  "parserOptions": {
-    "ecmaVersion": 2021
-  },
-  "plugins": [],
-  "rules": {}
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }
